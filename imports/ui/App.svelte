@@ -27,7 +27,7 @@
     // then count how many there are (that's the number of undone tasks)
     // set to a variable called incompleteCount
     incompleteCount = TasksCollection.find(hideCompletedFilter).count();
-    
+
     // display number of undone tasks 
     pendingTasksTitle = `${incompleteCount ? ` (${incompleteCount})` : ''}`;
   }
@@ -52,7 +52,7 @@
   <div class="main">
     <TaskForm />
     <div class="filter">
-      <!-- if we click the hide completed button, call the setHideCompleted function which instantiates hideCompleted with the opposite of what it currently is -> 
+      <!-- if we click the hide completed button, call the setHideCompleted function which instantiates hideCompleted with the opposite of what it currently is --> 
       <!-- if hideCompleted is now True, then change the button to 'Show All', else change to 'Hide Completed' -->
       <button on:click={() => setHideCompleted(!hideCompleted)}>
         {hideCompleted ? 'Show All' : 'Hide Completed'}
